@@ -1,0 +1,11 @@
+# dirs
+**.idea/
+**/build/
+**/bin/
+**/target/
+
+# files
+**/*.iml
+**/*.ipr
+**/*.iws
+**/*.log*
