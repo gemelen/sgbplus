@@ -31,7 +31,7 @@ def makeCommandLineProject(project: Project): Project =
   project.
     settings(commonSettings: _*).
     settings(
-      libraryDependencies ++= scalaTests ++ Seq(log4j)
+      libraryDependencies ++= scalaTests ++ logging ++ Seq(typesafeConfig)
     )
 
 def makeLibraryProject(project: Project): Project =
@@ -66,6 +66,5 @@ lazy val `gate` = makeCommandLineProject(project).
   settings(
     name := "gate",
     mainClass in Compile := Some("net.gemelen.dev.sgbplus.gate.Main"),
-    libraryDependencies ++=
-      Seq()
+    libraryDependencies ++= akka ++ Seq()
   )

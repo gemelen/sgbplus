@@ -27,12 +27,14 @@ object Dependencies {
 
   // logging
   val slf4j               = "org.slf4j" % "slf4j-api" % "1.7.21"
-  val logBack-core        = "ch.qos.logback" % "logback-core" % "1.1.7"
-  val logBack-classic     = "ch.qos.logback" % "logback-classic" % "1.1.7"
+  val logBack_core        = "ch.qos.logback" % "logback-core" % "1.1.7"
+  val logBack_classic     = "ch.qos.logback" % "logback-classic" % "1.1.7"
+
+  val logging = Seq(slf4j, logBack_core, logBack_classic)
 
  // configuration
   val scopt                 = "com.github.scopt"           %% "scopt"                       % Versions.Scopt
-  val typsafeConfig         = "com.typesafe"                % "config"                      % Versions.Config
+  val typesafeConfig        = "com.typesafe"                % "config"                      % Versions.Config
 
   // Tests
   val scalaMockSpecs    = "org.scalamock" %% "scalamock-specs2-support"     % "3.2.2"     % Test
