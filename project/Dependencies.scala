@@ -4,7 +4,7 @@ import sbt.impl.GroupArtifactID
 object Versions {
   val Scopt               = "3.3.0"
   val Config              = "1.3.0"
-  val Akka                = "2.4.9"
+  val Akka                = "2.4.10"
   val Jackson             = "2.7.5"
 }
 

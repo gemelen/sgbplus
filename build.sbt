@@ -20,7 +20,7 @@ lazy val commonSettings = Seq(
   // use cached version for non changing libraries
   updateOptions := updateOptions.value.withCachedResolution(cachedResoluton = true),
 
-  //pluginDirectory := file("project"),
+  // pluginDirectory := file("project"),
   topLevelDirectory := None,
   crossPaths := false,
   exportJars := true,
@@ -58,7 +58,7 @@ lazy val projects = Seq[ProjectReference](
 lazy val `common` = makeLibraryProject(project).
   settings(
     name := "common",
-    libraryDependencies ++= Seq()
+    libraryDependencies ++= akka ++ Seq()
   )
 
 lazy val `gate` = makeCommandLineProject(project).
