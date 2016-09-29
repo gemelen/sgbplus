@@ -27,6 +27,5 @@ class PlayerManagerActor extends Actor with SLF4JLogging {
 
   override def receive: Receive = {
     case Get(id) => sender() ! getPlayer(id)
-    case _ => log.warn("unknown command")
   }
 }
