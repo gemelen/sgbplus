@@ -47,7 +47,7 @@ class AdminActor(serverAddress: String, serverPort: Integer, implicit val system
 
             onSuccess(maybePlayer) {
               case Some(item) => complete(item.toString)
-              case None => complete(StatusCodes.NotFound)
+              case None => complete(StatusCodes.NotFound.defaultMessage)
             }
         }
     }
