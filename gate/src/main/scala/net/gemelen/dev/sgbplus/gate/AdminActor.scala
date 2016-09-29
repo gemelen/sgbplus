@@ -37,10 +37,10 @@ class AdminActor(serverAddress: String, serverPort: Integer, implicit val system
         path("hello") {
           complete("hello from sgb")
         } ~
-          path("goodbye") {
-            self ! ShutDown
-            complete("shutting sgb down")
-          }
+        path("goodbye") {
+          self ! ShutDown
+          complete("shutting sgb down")
+        } ~
         pathPrefix("player" / LongNumber) {
           id =>
             val maybePlayer: Future[Any] = fetchPlayer(id)
