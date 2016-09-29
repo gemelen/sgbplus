@@ -58,7 +58,7 @@ lazy val projects = Seq[ProjectReference](
 lazy val `common` = makeLibraryProject(project).
   settings(
     name := "common",
-    libraryDependencies ++= Seq()
+    libraryDependencies ++= akka ++ Seq()
   )
 
 lazy val `gate` = makeCommandLineProject(project).
