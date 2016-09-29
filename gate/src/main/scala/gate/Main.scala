@@ -32,7 +32,7 @@ object Main extends SLF4JLogging {
   }
 
   def main(args: Array[String]): Unit = {
-    implicit val system = ActorSystem(config.getString("akka.systemName"))
+    implicit val system = ActorSystem(config.getString("akka.systemName"), config.getConfig("akka"))
 
     scala.sys.addShutdownHook {
       system.terminate()
@@ -44,5 +44,6 @@ object Main extends SLF4JLogging {
         Http().bindAndHandle(routes, serverAddress, serverPort)
       }
     })
+    t.start()
   }
 }
