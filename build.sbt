@@ -20,7 +20,7 @@ lazy val commonSettings = Seq(
   // use cached version for non changing libraries
   updateOptions := updateOptions.value.withCachedResolution(cachedResoluton = true),
 
-  //pluginDirectory := file("project"),
+  // pluginDirectory := file("project"),
   topLevelDirectory := None,
   crossPaths := false,
   exportJars := true,
