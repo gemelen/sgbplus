@@ -47,8 +47,6 @@ object Main extends SLF4JLogging {
       }
 
   def main(args: Array[String]): Unit = {
-    implicit val system = ActorSystem(config.getString("akka.systemName"), config.getConfig("akka"))
-
     scala.sys.addShutdownHook {
       log.info("shutting down")
       system.terminate()
